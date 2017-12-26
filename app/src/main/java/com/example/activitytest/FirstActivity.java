@@ -51,8 +51,14 @@ public class FirstActivity extends AppCompatActivity {
                 //intent.setData(Uri.parse("http://www.baidu.com"));
                 //startActivity(intent);
 
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:10086"));
+                //Intent intent = new Intent(Intent.ACTION_DIAL);
+                //intent.setData(Uri.parse("tel:10086"));
+                //startActivity(intent);
+
+
+                String data = "Hello SecondActivity";
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                intent.putExtra("extra_data", data);
                 startActivity(intent);
 
 
