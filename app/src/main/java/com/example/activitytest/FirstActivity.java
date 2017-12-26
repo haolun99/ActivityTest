@@ -1,6 +1,7 @@
 package com.example.activitytest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -42,9 +43,13 @@ public class FirstActivity extends AppCompatActivity {
                     public void onClick(View v){
                 //Toast.makeText(FirstActivity.this, "You clicked button 1", Toast.LENGTH_SHORT).show();
                 //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
-                Intent intent = new Intent("com.example.activitytest.ACTION_START");
-                startActivity(intent);
 
+                //Intent intent = new Intent("com.example.activitytest.ACTION_START");
+                //startActivity(intent);
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
+                startActivity(intent);
 
             }
         });
