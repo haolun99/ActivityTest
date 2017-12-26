@@ -47,9 +47,14 @@ public class FirstActivity extends AppCompatActivity {
                 //Intent intent = new Intent("com.example.activitytest.ACTION_START");
                 //startActivity(intent);
 
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.baidu.com"));
+                //Intent intent = new Intent(Intent.ACTION_VIEW);
+                //intent.setData(Uri.parse("http://www.baidu.com"));
+                //startActivity(intent);
+
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:10086"));
                 startActivity(intent);
+
 
             }
         });
